@@ -77,7 +77,7 @@ app = Kyoukai("owapi")
 
 @app.route("/")
 async def root(ctx: HTTPRequestContext):
-    raise {"The World Always": "Needs More Heroes"}
+    return {"The World Always": "Needs More Heroes"}
 
 @app.root.errorhandler(500)
 async def e500(ctx: HTTPRequestContext, exc: HTTPException):
